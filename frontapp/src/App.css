@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,1000;1,6..12,600&display=swap');
+
+*{font-family: 'Nunito Sans', sans-serif;}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.welcomeContainer{
+  position: relative;
+  display: flex;
+  /*background-color: rgba(74, 74, 74, 0.096);*/
+  height: 100vh;
+  /*background-color: rgba(255, 255, 255, 0.116);*/
+  
+
+}
+.welcomeContainer::before{
+  opacity: 1;
+  background: url("../public/bgpat3.jpg");
+  background-size: cover;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.welcome{
+  backdrop-filter: blur(15px);
+  position: relative;
+  background-size: contain;
+  border-radius: 15px;
+  background-color: rgba(23, 23, 23, 0.168);
+  padding: 20px;
+  max-height: 500px;
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  border: solid 2px rgba(255, 255, 255, 0.379);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.welcome::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background-image: url("../public/patern.jpg");*/
+  background-size: cover;
+  opacity:0.1;
+  border-radius: 10px;
+   /* Ajustez l'opacité ici */
+}
+
+.welcome h6{
+  padding: 0 50px;
+  color: rgba(255, 255, 255, 0.585);
+  margin-bottom: 15px;
+}
+.welcome h1{
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.client-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: scroll;
+  height: 130px;
+  z-index: 25;
+}
+.client-list span{
+  z-index: 2;
+  background-color: rgba(148, 255, 148, 0.593);
+  color: rgb(0, 82, 0);
+  padding: 5px 0;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.messageContainer{
+  position: relative;
+  display: flex;
+  /*background-color: rgba(74, 74, 74, 0.096);*/
+  height: 100vh;
+
+  
+}
+.messageContainer::before{
+  opacity:1;
+  background: url("../public/bgpat3.jpg");
+  background-size: cover;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+.message{
+  position: relative;
+  background-size: contain;
+  border-radius: 30px;
+  padding: 10px 0;
+  height: 620px;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;*/
+}
+.header-conversation{
+  position: absolute;
+  z-index: 10;
+  background-color: #0000007d;
+  backdrop-filter: blur(10px);
+  border-radius: 29px 29px 0 0px;
+  width: 100%;
+  padding-top: 10px;
+  top: 0;
+  height: max-content;
+}
+/*.message::after {
+  content: '';
+  position: absolute;
+  top: -8px; left: -8px;
+  right: -8px; bottom: -8px;
+  z-index: -1;
+  background: black;
+ border-radius: 35px;
+}
+*/
+
+.messageUi{
+  position: relative;
+  background-size: contain;
+  border-radius: 40px;
+  background-color: #000000;
+  height: 640px;
+  width: 335px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.messageUi::before{
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px;
+  right: -4px; bottom: -4px;
+  z-index: -1;
+  background: rgb(226, 226, 226);
+ border-radius: 43px;
+}
+
+
+.message::before{
+  contain: '';
+  background: url("../public/iphone.png");
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+}
+.message h1{
+  display: flex;
+  font-size:x-large;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(234, 234, 234);
+}
+.message h1 span{
+  padding: 5px 10px;
+  background-color: rgba(0, 128, 0, 0.132);
+  border-radius: 8px;
+}
+
+.avatar-selector{
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    margin-bottom: 20px;
+    size: cover;
+}
+.avatarPic{
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition ajoutée ici */
+
+}
+.avatarPicSelected{
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition ajoutée ici */
+  border: solid rgb(255, 255, 255) 2px;
+  transform: scale(1.2); /* Légère augmentation de taille */
+  box-shadow: rgb(255, 255, 255) 0px 7px 29px 0px;
+  border-radius: 50%;
+  width: 50px;
+  margin: 5px;
+  height: 50px;
+}
+
+input.form-control:focus {
+  outline: none !important;
+  border: none !important;
+  border-color: none !important;
+  box-shadow: none !important;
+}
+
+.form-control {
+  background-color: #0000001d !important;
+  color: #0000009d;
+  font-weight: bold!important;
+  border: none!important; /* Couleur de fond de votre choix */
+  /* autres styles */
+}
+
+.formButton{
+
+  background-color: rgba(205, 255, 202, 0.466)!important;
+  color: rgb(55, 116, 45)!important;
+  border: none!important;
+}
+
+.welcomeClient-connected span{
+  background-color: rgba(205, 255, 202, 0.466);
+  color: rgb(55, 116, 45);
+}
+
+
+
+.message-list{
+  margin: 0;
+  padding: 0;
+  background: #F0F0F0;
+  overflow: auto;
+  padding: 8px;
+  background: url("../public/whapatern.jpg");
+  background-size: cover;
+  min-height: 620px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  width: 320px;
+  max-height: 620px;
+
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.message-list::-webkit-scrollbar-track {
+    background: #5f5f5f1a;
+    color: black;
+  }
+.message-list {
+  top: 0;
+  position: absolute;
+  list-style-type: none;
+  border-radius: 31px;
+}
+
+.message-item {
+  display: flex;
+  align-items: flex-start; /* Alignez les éléments en haut */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 60%;
+  word-wrap: break-word; /* Permet au texte de passer à la ligne suivante */
+  animation: slideIn 0.5s ease-out;
+  
+}
+
+.sent-message {
+  align-self: flex-end;
+  margin-left: auto;
+  border-radius: 15px;
+  text-align: right;
+  height: auto;
+  
+}
+
+li .sent-message{
+  background-color: #DCF8C6; /* Couleur pour les messages envoyés */
+}
+.formform{
+  position: absolute;
+  bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right:8px ;
+  padding-left: 8px;
+  display: flex;
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.501);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 29px 29px;
+  width: 100%;
+}
+.buttonSentMessage{
+  border-radius: 50%;
+  padding: 10px 14px ;
+  outline: none;
+  border:none;
+  background-color:#ffffff47;
+  color: white;
+}
+.inputMessage{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 70px;
+    background: #00000069;
+    color: rgb(187, 187, 187);
+    transition: 0.3s;
+    width: 100%;
+}
+
+.inputMessage:focus {
+    outline: none;
+    transition: 0.3s;
+   }
+
+.received-message {
+  /*background-color: #E5E5EA; /* Couleur par défaut pour les messages reçus */
+  margin-right: auto;
+  border-radius: 15px;
+  text-align: left;
+  max-width: 220px;
+  height: auto;
+}
+.sent-message .received-message{
+  display: flex;
+  flex-direction: column;
+}
+
+.liPic{
+}
+
+.message-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-text {
+  color: #333;
+  font-size: 16px;  
+  line-height: 1.4;
+  white-space: pre-wrap; /* Garde la mise en forme et les sauts de ligne */
+  height: auto;
+  overflow: hidden;
+  background-color: #fffffff6;
+  backdrop-filter: blur(2px);
+  padding: 8px;
+  border-radius: 9px;
+}
+
+.sent-message,
+.received-message {
+  overflow: hidden;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.userButton{
+  position: absolute;
+  background-color:rgb(148, 255, 152);
+  border-radius: 50%;
+  width: 15px;
+  height: 14.5px;
+  border: none;
+  outline: none;
+  right: 20px;
+  top: 24px;
+}
+
+.quitButton{
+  position: absolute;
+  background-color:rgb(255, 148, 148);
+  border-radius: 50%;
+  width: 15px;
+  height: 14.5px;
+  border: none;
+  outline: none;
+  right: 40px;
+  top: 24px;
+}
+.afficheClientConnecté{
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: scale(0.95) translateY(-20px); 
+  position: absolute;
+  height: auto;
+  background: rgba(0, 0, 0, 0.505)!important;
+  padding: 5px;
+  gap: 5px;
+  border-radius: 8px;
+  right: 20px;
+  top: 50px;
+  max-height: 170px;
+  overflow: scroll;
+  /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+  backdrop-filter: blur(20px)!important;
+}
+
+.afficheClientConnecté.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  backdrop-filter: blur(20px)!important;
+  z-index: -20;
+}
+
+.afficheClientConnecté.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95) translateY(-20px);
+}
+
+.afficheClientConnecté span{
+  padding: 5px;
+}
+
+.clientConnecteMessage span{
+  background-color: rgb(148, 255, 144);
+
+}
+
+.barreMenu{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: red;
+}
+
+.barreMenu li{
+  list-style-type: none;
+}
+
+
+
+
+
+
+
+.loader {
+  position: absolute;
+  top: calc(50% - 1.25em);
+  left: calc(50% - 1.25em);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
+ }
+ 
+ .loader:before, .loader:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+ }
+ 
+ .loader:before {
+  animation: before8 2s infinite;
+ }
+ 
+ .loader:after {
+  animation: after6 2s infinite;
+ }
+ 
+ @keyframes before8 {
+  0% {
+   width: 0.5em;
+   box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+ 
+  35% {
+   width: 2.5em;
+   box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+  }
+ 
+  70% {
+   width: 0.5em;
+   box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+ 
+  100% {
+   box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+ }
+ 
+ @keyframes after6 {
+  0% {
+   height: 0.5em;
+   box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+ 
+  35% {
+   height: 2.5em;
+   box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+  }
+ 
+  70% {
+   height: 0.5em;
+   box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+  }
+ 
+  100% {
+   box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+ }
+ 
+
+.hidden {
+  opacity: 0;
+  visibility: hidden; /* Cela assure que le loader ne bloque pas l'interaction avec les éléments en dessous */
+}
